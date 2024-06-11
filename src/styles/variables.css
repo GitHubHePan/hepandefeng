@@ -1,0 +1,69 @@
+/** 全局 CSS 变量，这种变量不仅可以在 CSS 和 SCSS 中使用，还可以导入到 JS 中使用 */
+
+:root {
+  /** Body */
+  --HP-body-text-color: var(--el-text-color-primary);
+  --HP-body-bg-color: var(--el-bg-color-page);
+  /** Header 区域 = NavigationBar 组件 + TagsView 组件 */
+  --HP-header-height: calc(var(--HP-navigationbar-height) + var(--HP-tagsview-height));
+  --HP-header-bg-color: var(--el-bg-color);
+  --HP-header-box-shadow: var(--el-box-shadow-lighter);
+  --HP-header-border-bottom: 1px solid var(--el-fill-color);
+  /** NavigationBar 组件 */
+  --HP-navigationbar-height: 50px;
+  --HP-navigationbar-text-color: var(--el-text-color-regular);
+  /** Sidebar 组件（左侧模式全部生效、顶部模式全部不生效、混合模式非颜色部分生效） */
+  --HP-sidebar-width: 220px;
+  --HP-sidebar-hide-width: 58px;
+  --HP-sidebar-border-right: 1px solid var(--el-fill-color);
+  --HP-sidebar-menu-item-height: 60px;
+  --HP-sidebar-menu-tip-line-bg-color: var(--el-color-primary);
+  --HP-sidebar-menu-bg-color: #001428;
+  --HP-sidebar-menu-hover-bg-color: #409eff10;
+  --HP-sidebar-menu-text-color: #cfd3dc;
+  --HP-sidebar-menu-active-text-color: #ffffff;
+  /** TagsView 组件 */
+  --HP-tagsview-height: 34px;
+  --HP-tagsview-text-color: var(--el-text-color-regular);
+  --HP-tagsview-tag-active-text-color: #ffffff;
+  --HP-tagsview-tag-bg-color: var(--el-bg-color);
+  --HP-tagsview-tag-active-bg-color: var(--el-color-primary);
+  --HP-tagsview-tag-border-radius: 2px;
+  --HP-tagsview-tag-border-color: var(--el-border-color-lighter);
+  --HP-tagsview-tag-active-border-color: var(--el-color-primary);
+  --HP-tagsview-tag-icon-hover-bg-color: #00000030;
+  --HP-tagsview-tag-icon-hover-color: #ffffff;
+  --HP-tagsview-contextmenu-text-color: var(--el-text-color-regular);
+  --HP-tagsview-contextmenu-hover-text-color: var(--el-text-color-primary);
+  --HP-tagsview-contextmenu-bg-color: var(--el-bg-color-overlay);
+  --HP-tagsview-contextmenu-hover-bg-color: var(--el-fill-color);
+  --HP-tagsview-contextmenu-box-shadow: var(--el-box-shadow);
+  /** Hamburger 组件 */
+  --HP-hamburger-text-color: var(--el-text-color-primary);
+  /** RightPanel 组件  */
+  --HP-rightpanel-button-bg-color: #001428;
+}
+
+/** 内容区放大时，将不需要的组件隐藏 */
+body.content-large {
+  /** Header 区域 = TagsView 组件 */
+  --HP-header-height: var(--HP-tagsview-height);
+  /** NavigationBar 组件 */
+  --HP-navigationbar-height: 0px;
+  /** Sidebar 组件 */
+  --HP-sidebar-width: 0px;
+  --HP-sidebar-hide-width: 0px;
+}
+
+/** 内容区全屏时，将不需要的组件隐藏 */
+body.content-full {
+  /** Header 区域 */
+  --HP-header-height: 0px;
+  /** NavigationBar 组件 */
+  --HP-navigationbar-height: 0px;
+  /** Sidebar 组件 */
+  --HP-sidebar-width: 0px;
+  --HP-sidebar-hide-width: 0px;
+  /** TagsView 组件 */
+  --HP-tagsview-height: 0px;
+}
