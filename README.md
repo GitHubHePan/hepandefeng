@@ -1,4 +1,8 @@
+project brief introduction
 
+1. 用于记录个人技术点
+2. 用于记录工作中遇到的比较难，解决的比较出彩的点（不限于本人自己的）
+3. 用于练习vue3
 
 ```bash
 # configure
@@ -42,4 +46,3 @@ pnpm lint
 # unit test
 pnpm test
 ```
-
