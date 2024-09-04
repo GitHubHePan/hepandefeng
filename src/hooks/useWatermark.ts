@@ -76,6 +76,7 @@ export function useWatermark(parentEl: Ref<HTMLElement | null> = bodyEl) {
     watermarkEl.style.pointerEvents = "none"
     watermarkEl.style.top = "0"
     watermarkEl.style.left = "0"
+    watermarkEl.style.fontSize = ".12rem"
     watermarkEl.style.position = watermarkElPosition
     watermarkEl.style.zIndex = "99999"
     const { clientWidth, clientHeight } = parentEl.value!

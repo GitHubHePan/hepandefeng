@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 import { useTagsViewStore } from "@/store/modules/tags-view"
-// import { useSettingsStore } from "@/store/modules/settings"
-// import Footer from "./Footer/index.vue"
+import { useSettingsStore } from "@/store/modules/settings"
+import Footer from "./Footer/index.vue"
 
 const tagsViewStore = useTagsViewStore()
-// const settingsStore = useSettingsStore()
+const settingsStore = useSettingsStore()
 </script>
 
 <template>
@@ -19,7 +19,7 @@ const tagsViewStore = useTagsViewStore()
         </transition>
       </router-view>
       <!-- 页脚 -->
-      <!-- <Footer v-if="settingsStore.showFooter" /> -->
+      <Footer v-if="settingsStore.showFooter" />
     </div>
     <!-- 返回顶部 -->
     <el-backtop />
@@ -37,12 +37,13 @@ const tagsViewStore = useTagsViewStore()
 }
 
 .app-scrollbar {
-  padding: 20px 20px 0px;
+  padding: 0.1rem 0.1rem;
   flex-grow: 1;
   overflow: auto;
   @extend %scrollbar;
   display: flex;
   flex-direction: column;
+  position: relative;
   .app-container-grow {
     flex-grow: 1;
   }

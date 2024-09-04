@@ -3,8 +3,9 @@ import { reactive, ref } from "vue"
 import { useRouter } from "vue-router"
 import { useUserStore } from "@/store/modules/user"
 import { type FormInstance, type FormRules } from "element-plus"
-import { User, Lock, Key, Picture, Loading } from "@element-plus/icons-vue"
-import { getLoginCodeApi } from "@/api/login"
+import { User, Lock } from "@element-plus/icons-vue"
+// import { User, Lock, Key, Picture, Loading } from "@element-plus/icons-vue"
+// import { getLoginCodeApi } from "@/api/login"
 import { type LoginRequestData } from "@/api/login/types/login"
 import ThemeSwitch from "@/components/ThemeSwitch/index.vue"
 import Owl from "./components/Owl.vue"
@@ -18,8 +19,8 @@ const loginFormRef = ref<FormInstance | null>(null)
 
 /** 登录按钮 Loading */
 const loading = ref(false)
-/** 验证码图片 URL */
-const codeUrl = ref("")
+// /** 验证码图片 URL */
+// const codeUrl = ref("")
 /** 登录表单数据 */
 const loginFormData: LoginRequestData = reactive({
   username: "admin",
@@ -153,29 +154,29 @@ const handleLogin = () => {
     cursor: pointer;
   }
   .login-card {
-    width: 480px;
+    width: 4.8rem;
     max-width: 90%;
-    border-radius: 20px;
-    box-shadow: 0 0 10px #dcdfe6;
+    border-radius: 0.2rem;
+    box-shadow: 0 0 0.1rem #dcdfe6;
     background-color: var(--el-bg-color);
     overflow: hidden;
     .title {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 150px;
+      height: 1.5rem;
       img {
         height: 100%;
       }
     }
     .content {
-      padding: 20px 50px 50px 50px;
+      padding: 0.2rem 0.5rem 0.5rem 0.5rem;
       :deep(.el-input-group__append) {
         padding: 0;
         overflow: hidden;
         .el-image {
-          width: 100px;
-          height: 40px;
+          width: 1rem;
+          height: 0.4rem;
           border-left: 0px;
           user-select: none;
           cursor: pointer;
@@ -184,7 +185,7 @@ const handleLogin = () => {
       }
       .el-button {
         width: 100%;
-        margin-top: 10px;
+        margin-top: 0.1rem;
       }
     }
   }

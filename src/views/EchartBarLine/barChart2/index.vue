@@ -9,7 +9,7 @@
 <script setup>
 import ECharts from "@/components/chartComponent/index.vue"
 import SubContent from "@/components/subContent/index.vue"
-import { getImagebase, getDataZoom } from "@/utils/index"
+import { getImagebase, getDataZoom, getChartFontSzie } from "@/utils/index"
 
 import { ref } from "vue"
 
@@ -77,7 +77,7 @@ const chartOption = ref({
       nameLocation: "end",
       nameTextStyle: {
         align: "left",
-        fontSize: 12,
+        fontSize: getChartFontSzie(12),
         padding: [0, 0, 0, 0]
       },
       nameGap: 10,
@@ -95,7 +95,7 @@ const chartOption = ref({
       nameGap: 10,
       nameTextStyle: {
         align: "right",
-        fontSize: 12,
+        fontSize: getChartFontSzie(12),
         padding: [0, -8, 0, 0]
       },
       offset: 240,
@@ -113,7 +113,7 @@ const chartOption = ref({
             width: 8,
             height: 8,
             color: "red",
-            fontSize: 13,
+            fontSize: getChartFontSzie(14),
             backgroundColor: {
               image: getImagebase("../../src/assets/imgs/arrow-down.png"),
               align: "right"
@@ -124,7 +124,7 @@ const chartOption = ref({
             width: 8,
             height: 8,
             color: "green",
-            fontSize: 13,
+            fontSize: getChartFontSzie(14),
             backgroundColor: {
               image: getImagebase("../../src/assets/imgs/arrow-up.png"),
               align: "right"
@@ -150,7 +150,7 @@ const chartOption = ref({
 
 <style lang="scss" scoped>
 .chartContainer {
-  height: calc(50vh - 50px);
+  height: calc(50vh - 0.5rem);
   width: 50%;
   display: flex;
 }

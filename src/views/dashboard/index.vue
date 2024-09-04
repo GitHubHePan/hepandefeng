@@ -32,7 +32,7 @@
           <el-card class="box-card2">
             <template v-slot:header>
               <div class="clearfix">
-                <span style="line-height: 36px">顾客</span>
+                <span>顾客</span>
                 <el-popover placement="right" v-model="related_pop" width="630">
                   <el-tabs class="user-tab" v-model="userTab" type="card" @tab-click="userTabClick">
                     <el-tab-pane label="新增" name="first" />
@@ -41,7 +41,7 @@
                   <el-table :data="userData" style="width: 100%" height="700" border stripe>
                     <el-table-column label="头像" width="80">
                       <template v-slot="scope">
-                        <img :src="scope.row.avatar" alt="" style="width: 50px; height: 50px" />
+                        <img :src="scope.row.avatar" alt="" />
                       </template>
                     </el-table-column>
                     <el-table-column prop="nickname" label="昵称" width="140" />
@@ -71,7 +71,7 @@
           <el-card class="box-card2">
             <template v-slot:header>
               <div class="clearfix">
-                <span style="line-height: 36px">下单</span>
+                <span>下单</span>
               </div>
             </template>
             <div class="text item">
@@ -86,7 +86,7 @@
           <el-card class="box-card2">
             <template v-slot:header>
               <div class="clearfix">
-                <span style="line-height: 36px">支付</span>
+                <span>支付</span>
               </div>
             </template>
             <div class="text item">
@@ -104,7 +104,7 @@
           <el-card class="box-card">
             <div class="text item">
               <span>客单价</span>
-              <p style="float: right">{{ (mainInfo.payOrderSum / mainInfo.payOrderNum) | numFilter }}</p>
+              <p style="float: right">{{ numFilter(mainInfo.payOrderSum / mainInfo.payOrderNum) }}</p>
             </div>
             <p class="tips">成交金额/成交订单数</p>
           </el-card>
@@ -112,7 +112,7 @@
             <div class="text item">
               <span>下单转化率</span>
               <p style="float: right">
-                {{ (mainInfo.addOrderNum / (mainInfo.newUser + mainInfo.oldUser)) | numFilter }}
+                {{ numFilter(mainInfo.addOrderNum / (mainInfo.newUser + mainInfo.oldUser)) }}
               </p>
             </div>
             <p class="tips">下单人数/访问人数</p>
@@ -120,7 +120,7 @@
           <el-card class="box-card">
             <div class="text item">
               <span>下单-支付转化率</span>
-              <p style="float: right">{{ (mainInfo.payOrderNum / mainInfo.addOrderNum) | numFilter }}</p>
+              <p style="float: right">{{ numFilter(mainInfo.payOrderNum / mainInfo.addOrderNum) }}</p>
             </div>
             <p class="tips">支付人数/下单人数</p>
           </el-card>
@@ -128,7 +128,7 @@
             <div class="text item">
               <span>支付转化率</span>
               <p style="float: right">
-                {{ (mainInfo.payOrderNum / (mainInfo.newUser + mainInfo.oldUser)) | numFilter }}
+                {{ numFilter(mainInfo.payOrderNum / (mainInfo.newUser + mainInfo.oldUser)) }}
               </p>
             </div>
             <p class="tips">支付人数/访问人数</p>
@@ -164,12 +164,15 @@ export default {
     callback() {
       this.resetVision = false
     },
+    numFilter(value) {
+      const realVal = Number(value).toFixed(2)
+      return Number(realVal)
+    },
     seeClick() {
       console.log("????")
     },
     getInfo() {
       getMainDataApi().then((response) => {
-        console.log(response.data, "11111111111111111111")
         this.infoData = response.data
       })
     },
@@ -216,13 +219,6 @@ export default {
     //   this.loginInfo = JSON.parse(window.localStorage.getItem("userInfo") || null)
     //   this.username = this.loginInfo.username
     // }
-  },
-
-  filters: {
-    numFilter(value) {
-      const realVal = Number(value).toFixed(2)
-      return Number(realVal)
-    }
   }
 }
 </script>
@@ -230,21 +226,21 @@ export default {
 <style scoped>
 .notice {
   width: 100%;
-  height: 60px;
-  padding: 30px;
+  height: 0.6rem;
+  padding: 0.3rem;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   background: #ffecd5;
-  margin-bottom: 20px;
-  font-size: 16px;
-  border-radius: 6px;
+  margin-bottom: 0.2rem;
+  font-size: 0.16rem;
+  border-radius: 0.06rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .breadcrumb {
-  margin-bottom: 10px;
+  margin-bottom: 0.1rem;
 }
 .notice .r {
   display: flex;
@@ -253,22 +249,22 @@ export default {
 }
 .count {
   background: #fff;
-  padding: 10px;
+  padding: 0.1rem;
 }
 .float-right {
   float: right;
 }
 .tips {
   color: #8c939d;
-  font-size: 13px;
+  font-size: 0.14rem;
 }
 
 .text {
-  font-size: 14px;
+  font-size: 0.14rem;
 }
 
 .item {
-  padding: 10px 0;
+  padding: 0.1rem 0;
 }
 
 .clearfix:before,
@@ -281,12 +277,12 @@ export default {
   clear: both;
 }
 .tab-content {
-  margin-bottom: 20px;
+  margin-bottom: 0.2rem;
 }
 .box-card {
   width: 32%;
   float: left;
-  margin: 0 20px 14px 0;
+  margin: 0 0.2rem 0.14rem 0;
 }
 
 .box-card:last-child {
@@ -304,7 +300,7 @@ export default {
 .box-card2 {
   width: 32%;
   float: left;
-  margin-right: 17px;
+  margin-right: 0.18rem;
 }
 
 .box-card2:last-child {
@@ -312,11 +308,11 @@ export default {
 }
 
 .header {
-  margin-bottom: 30px;
+  margin-bottom: 0.3rem;
 }
 
 .line {
-  margin: 20px 0;
+  margin: 0.2rem 0;
   border-top: 1px solid #d1dbe5;
 }
 
@@ -324,6 +320,10 @@ export default {
   background: #e64242;
   border: none;
   color: #fff;
+}
+
+.box-card h1 {
+  font-size: 0.16rem;
 }
 
 .card-blue {

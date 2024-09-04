@@ -45,11 +45,11 @@ const { isLeft, isTop, isLeftTop, setLayoutMode } = useLayoutMode()
 }
 
 .layout-mode {
-  width: 60px;
+  width: 0.6rem;
   flex-grow: 0;
   overflow: hidden;
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 0.06px;
   border: 2px solid transparent;
   &:hover {
     border: 2px solid var(--el-color-primary);
@@ -61,11 +61,11 @@ const { isLeft, isTop, isLeftTop, setLayoutMode } = useLayoutMode()
 }
 
 .el-header {
-  height: 12px;
+  height: 0.12rem;
 }
 
 .el-aside {
-  width: 16px;
+  width: 0.16rem;
 }
 
 .left {

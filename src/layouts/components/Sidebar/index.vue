@@ -49,7 +49,7 @@ const sidebarMenuHoverBgColor = computed(() => {
   return !isTop.value ? "var(--HP-sidebar-menu-hover-bg-color)" : "transparent"
 })
 const tipLineWidth = computed(() => {
-  return !isTop.value ? "2px" : "0px"
+  return !isTop.value ? ".02rem" : "0px"
 })
 // 当为顶部模式时隐藏垂直滚动条
 const hiddenScrollbarVerticalBar = computed(() => {

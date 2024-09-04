@@ -174,8 +174,8 @@ const chulikddk = (tankongta) => {
         jkes[i] = v.chulikmengx
       }
     })
-    const _max = Math.max.apply(Math, hel2)
-    const _min = Math.min.apply(Math, hel2)
+    const _max = Math.max(...hel2)
+    const _min = Math.min(...hel2)
     arrname.push(i, _max, _min, tankongta[i])
     kuaes.push(arrname)
   }

@@ -33,17 +33,17 @@ const props = defineProps<Props>()
 
 <style lang="scss" scoped>
 .card-container {
-  margin-bottom: 10px;
+  margin-bottom: 0.1rem;
   .card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     .card-title {
       font-weight: bold;
-      margin-right: 10px;
+      margin-right: 0.1rem;
     }
     .card-time {
-      font-size: 12px;
+      font-size: 0.12rem;
       color: var(--el-text-color-secondary);
     }
     .card-avatar {
@@ -52,7 +52,7 @@ const props = defineProps<Props>()
     }
   }
   .card-body {
-    font-size: 12px;
+    font-size: 0.12rem;
   }
 }
 </style>

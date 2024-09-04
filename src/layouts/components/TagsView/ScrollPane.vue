@@ -125,9 +125,9 @@ listenerRouteChange(() => {
   display: flex;
   justify-content: space-between;
   .arrow {
-    width: 40px;
+    width: 0.4rem;
     height: 100%;
-    font-size: 18px;
+    font-size: 0.18rem;
     cursor: pointer;
     &.left {
       box-shadow: 5px 0 5px -6px var(--el-border-color-darker);
@@ -145,7 +145,7 @@ listenerRouteChange(() => {
     }
   }
   .screenfull {
-    width: 40px;
+    width: 0.4rem;
     display: flex;
     justify-content: center;
     align-items: center;

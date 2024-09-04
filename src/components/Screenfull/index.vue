@@ -95,7 +95,7 @@ const handleContentFullClick = () => {
 
 <style lang="scss" scoped>
 .svg-icon {
-  font-size: 20px;
+  font-size: 0.2rem;
   &:focus {
     outline: none;
   }

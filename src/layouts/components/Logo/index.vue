@@ -52,8 +52,8 @@ const { isLeft, isTop } = useLayoutMode()
 
 .collapse {
   .layout-logo {
-    width: 32px;
-    height: 32px;
+    width: 0.32rem;
+    height: 0.32rem;
     vertical-align: middle;
     display: inline-block;
   }

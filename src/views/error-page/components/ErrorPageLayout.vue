@@ -17,8 +17,8 @@
   justify-content: center;
   align-items: center;
   &-svg {
-    width: 400px;
-    margin-bottom: 50px;
+    width: 4rem;
+    margin-bottom: 0.5rem;
   }
 }
 </style>

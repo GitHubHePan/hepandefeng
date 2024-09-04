@@ -4,23 +4,23 @@
   // 表单
   &--form-wrapper {
     .vxe-form {
-      padding: 10px 20px !important;
-      margin-bottom: 20px !important;
+      padding: 0.1rem 0.2rem !important;
+      margin-bottom: 0.2rem !important;
     }
   }
 
   // 工具栏
   &--toolbar-wrapper {
     .vxe-toolbar {
-      padding: 20px !important;
+      padding: 0.2rem !important;
     }
   }
 
   // 分页
   &--pager-wrapper {
     .vxe-pager {
-      height: 70px !important;
-      padding: 0 20px !important;
+      height: 0.7rem !important;
+      padding: 0 0.2rem !important;
       &--wrapper {
         // 参考 Bootstrap 的响应式设计 WIDTH = 768
         @media screen and (max-width: 768px) {

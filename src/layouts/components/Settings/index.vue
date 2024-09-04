@@ -66,11 +66,11 @@ watchEffect(() => {
 @import "@/styles/mixins.scss";
 
 .setting-container {
-  padding: 20px;
+  padding: 0.2rem;
   .setting-item {
-    font-size: 14px;
+    font-size: 0.14rem;
     color: var(--el-text-color-regular);
-    padding: 5px 0;
+    padding: 0.05rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -79,7 +79,7 @@ watchEffect(() => {
     }
   }
   .el-button {
-    margin-top: 40px;
+    margin-top: 0.4rem;
     width: 100%;
   }
 }

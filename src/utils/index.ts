@@ -27,6 +27,14 @@ export const setCssVariableValue = (cssVariableName: string, cssVariableValue: s
   }
 }
 
+export const getChartFontSzie = (res = 12) => {
+  // 获取屏幕宽度
+  const clientWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+  if (!clientWidth) return
+  const fontSize = clientWidth / 1920
+  return Number((res * fontSize).toFixed(1))
+}
+
 /** 重置项目配置 */
 export const resetConfigLayout = () => {
   removeConfigLayout()
@@ -94,7 +102,7 @@ export const getDataZoom = (arr: number[], axisArr: number[], isReverse: any, nu
         backgroundColor: "rgba(244,244,244,.1)",
         textStyle: {
           color: "#FAFAFA",
-          fontSize: 12
+          fontSize: getChartFontSzie(12)
         },
         labelLeft: 20,
         fillerColor: "#6E9CDA",

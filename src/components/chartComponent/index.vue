@@ -5,6 +5,7 @@ import { BarChart, LineChart, FunnelChart, ScatterChart, CustomChart } from "ech
 import { GridComponent, TitleComponent, LegendComponent, TooltipComponent, DataZoomComponent } from "echarts/components"
 import { CanvasRenderer } from "echarts/renderers"
 import * as echarts from "echarts"
+import { getChartFontSzie } from "@/utils/index"
 import _ from "lodash-es"
 
 interface chartProps {
@@ -102,7 +103,7 @@ const renderChart = (newOption: any) => {
   const commomOpts = {
     textStyle: {
       color: "#fff",
-      fontSize: 16
+      fontSize: getChartFontSzie(16)
     },
 
     tooltip: {
@@ -134,7 +135,7 @@ watch(
 
 <style lang="scss" scoped>
 .common-chart-container {
-  height: calc(100% - 0.4rem);
+  height: calc(100% - 0.1rem);
   flex: 1;
 }
 </style>

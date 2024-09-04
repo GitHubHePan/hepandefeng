@@ -70,28 +70,6 @@ export const constantRoutes: RouteRecordRaw[] = [
         }
       },
       {
-        path: "/order",
-        component: () => import("@/views/Order/index.vue"),
-        name: "orders",
-        meta: {
-          title: "订单列表",
-          svgIcon: "dashboard",
-          affix: true
-          // hidden: true
-        }
-      },
-      {
-        path: "/orderDetail/:id",
-        component: () => import("@/views/Order/OrderDetailPage.vue"),
-        name: "orderDetail",
-        meta: {
-          title: "订单详情",
-          svgIcon: "dashboard",
-          affix: true,
-          hidden: true
-        }
-      },
-      {
         path: "/echartsBarLine",
         component: () => import("@/views/EchartBarLine/index.vue"),
         name: "echartsBarLine",

@@ -64,19 +64,19 @@ const title = computed(() => `${props.title}${props.subTitle ? " " + props.subTi
 
 <style lang="scss" scoped>
 .item-container {
-  width: calc(50% - 10px);
-  height: calc(50vh - 80px);
+  width: calc(50% - 0.1rem);
+  height: calc(50vh - 0.54rem);
 
   display: flex;
-  border-radius: 8px;
+  border-radius: 0.08rem;
   flex-direction: column;
   .item-container-header {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-    height: 50px;
-    padding: 10px;
+    border-bottom: 0.01rem solid rgba(255, 255, 255, 0.18);
+    height: 0.5rem;
+    padding: 0.1rem;
     text-align: left;
     width: 100%;
-    line-height: 30px;
+    line-height: 0.3rem;
     .title-content {
       display: flex;
       align-items: center;
@@ -91,13 +91,13 @@ const title = computed(() => `${props.title}${props.subTitle ? " " + props.subTi
   }
   .item-container-body {
     flex: 1;
-    height: calc(100% - 50px);
+    height: calc(100% - 0.5rem);
   }
   &:nth-of-type(2n - 1) {
-    margin-right: 10px;
+    margin-right: 0.1rem;
   }
   &:nth-of-type(2n) {
-    margin-left: 10px;
+    margin-left: 0.1rem;
   }
 
   .transform-contaioner {
@@ -112,39 +112,16 @@ const title = computed(() => `${props.title}${props.subTitle ? " " + props.subTi
     );
 
     &.full-item-container {
-      // animation: 0.5s ease-in fullscreen-animation;
-      // animation-fill-mode: forwards;
-      // animation-iteration-count: 1;
-      height: calc(100% - 20px);
+      height: calc(100% - 0.2rem);
       width: 100%;
       position: absolute;
       top: 0;
       left: 0;
     }
 
-    // @keyframes fullscreen-animation {
-    //   from {
-    //     width: calc(50% - 10px);
-    //     height: calc(50vh - 80px);
-    //   }
-    //   to {
-    //     height: calc(100% - 20px);
-    //     width: 100%;
-    //   }
-    //   // 0% {
-    //   //   // position: absolute;
-    //   //   // top: 0;
-    //   //   // left: 0;
-    //   //   width: 100px;
-    //   // }
-    //   // 100% {
-    //   //   width: 200px;
-    //   // }
-    // }
     &.transparent-item-container {
       opacity: 0;
       visibility: hidden;
-      // transition: all ease 0.5s;
     }
   }
 }

@@ -85,13 +85,13 @@ const resolvePath = (routePath: string) => {
 <style lang="scss" scoped>
 .svg-icon {
   min-width: 1em;
-  margin-right: 12px;
-  font-size: 18px;
+  margin-right: 0.12rem;
+  font-size: 0.18rem;
 }
 
 .el-icon {
   width: 1em;
-  margin-right: 12px;
-  font-size: 18px;
+  margin-right: 0.12rem;
+  font-size: 0.18rem;
 }
 </style>

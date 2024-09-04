@@ -10,30 +10,30 @@ const props = withDefaults(defineProps<Props>(), {
   buttonTop: 350
 })
 
-const buttonTopCss = props.buttonTop + "px"
+const buttonTopCss = props.buttonTop / 100 + "rem"
 const show = ref(false)
 </script>
 
 <template>
   <div class="handle-button" @click="show = true">
-    <el-icon :size="24">
+    <el-icon>
       <Setting />
     </el-icon>
   </div>
-  <el-drawer v-model="show" size="300px" :with-header="false">
+  <el-drawer v-model="show" size="3rem" :with-header="false">
     <slot />
   </el-drawer>
 </template>
 
 <style lang="scss" scoped>
 .handle-button {
-  width: 48px;
-  height: 48px;
+  width: 0.48rem;
+  height: 0.48rem;
   background-color: var(--HP-rightpanel-button-bg-color);
   position: fixed;
   top: v-bind(buttonTopCss);
   right: 0;
-  border-radius: 6px 0 0 6px;
+  border-radius: 0.06rem 0 0 0.06rem;
   z-index: 10;
   cursor: pointer;
   pointer-events: auto;
@@ -41,5 +41,8 @@ const show = ref(false)
   display: flex;
   align-items: center;
   justify-content: center;
+  .el-icon {
+    font-size: 0.24rem;
+  }
 }
 </style>

@@ -25,7 +25,7 @@ const handleChangeTheme = ({ clientX, clientY }: MouseEvent, themeName: ThemeNam
   <el-dropdown trigger="click">
     <div>
       <el-tooltip effect="dark" content="主题模式" placement="bottom">
-        <el-icon :size="20">
+        <el-icon :size="'.2rem'">
           <MagicStick />
         </el-icon>
       </el-tooltip>

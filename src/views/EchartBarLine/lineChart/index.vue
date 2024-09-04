@@ -9,6 +9,7 @@
 <script setup>
 import ECharts from "@/components/chartComponent/index.vue"
 import SubContent from "@/components/subContent/index.vue"
+import { getChartFontSzie } from "@/utils/index"
 
 import { ref } from "vue"
 
@@ -31,7 +32,7 @@ const chartOption = ref({
       data: ["预购", "成交"],
       icon: "circle",
       textStyle: {
-        fontSize: 12,
+        fontSize: getChartFontSzie(12),
         color: "white",
         padding: [3, 0, 2]
       },

@@ -189,13 +189,13 @@ const handleReleaseUpOrDown = () => {
 <style lang="scss">
 .search-modal__private {
   .svg-icon {
-    font-size: 18px;
+    font-size: 0.18rem;
   }
   .el-dialog__header {
     display: none;
   }
   .el-dialog__footer {
-    border-top: 1px solid var(--el-border-color);
+    border-top: 0.01rem solid var(--el-border-color);
     padding: var(--el-dialog-padding-primary);
   }
 }

@@ -52,7 +52,7 @@ const logout = () => {
       <Notify v-if="showNotify" class="right-menu-item" />
       <el-dropdown class="right-menu-item">
         <div class="right-menu-avatar">
-          <el-avatar :icon="UserFilled" :size="30" />
+          <el-avatar :icon="UserFilled" />
           <span>{{ userStore.username }}</span>
         </div>
         <template #dropdown>
@@ -78,7 +78,7 @@ const logout = () => {
     display: flex;
     align-items: center;
     height: 100%;
-    padding: 0 15px;
+    padding: 0 0.15rem;
     cursor: pointer;
   }
   .breadcrumb {
@@ -104,21 +104,21 @@ const logout = () => {
     }
   }
   .right-menu {
-    margin-right: 10px;
+    margin-right: 0.1rem;
     height: 100%;
     display: flex;
     align-items: center;
     .right-menu-item {
-      padding: 0 10px;
+      padding: 0 0.1rem;
       cursor: pointer;
       .right-menu-avatar {
         display: flex;
         align-items: center;
         .el-avatar {
-          margin-right: 10px;
+          margin-right: 0.1rem;
         }
         span {
-          font-size: 16px;
+          font-size: 0.16rem;
         }
       }
     }

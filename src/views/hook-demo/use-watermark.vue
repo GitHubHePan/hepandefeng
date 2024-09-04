@@ -38,10 +38,10 @@ const { setWatermark: setGlobalWatermark, clearWatermark: clearGlobalWatermark }
 .local {
   height: 30vh;
   border: 2px dashed var(--el-color-primary);
-  margin-bottom: 20px;
+  margin-bottom: 0.2rem;
 }
 
 .el-button-group {
-  margin-right: 12px;
+  margin-right: 0.12rem;
 }
 </style>

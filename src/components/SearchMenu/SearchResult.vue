@@ -88,23 +88,23 @@ defineExpose({ getScrollTop })
 .result-item {
   display: flex;
   align-items: center;
-  height: 56px;
-  padding: 0 15px;
-  margin-top: 8px;
+  height: 0.56rem;
+  padding: 0 0.15rem;
+  margin-top: 0.08rem;
   border: 1px solid var(--el-border-color);
-  border-radius: 4px;
+  border-radius: 0.04rem;
   cursor: pointer;
   .svg-icon {
     min-width: 1em;
-    font-size: 18px;
+    font-size: 0.18rem;
   }
   .el-icon {
     width: 1em;
-    font-size: 18px;
+    font-size: 0.18rem;
   }
   &-title {
     flex: 1;
-    margin-left: 12px;
+    margin-left: 0.12rem;
   }
 }
 </style>

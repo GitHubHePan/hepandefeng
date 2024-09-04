@@ -35,15 +35,15 @@ const { isMobile } = useDevice()
 .search-footer {
   display: flex;
   color: var(--el-text-color-secondary);
-  font-size: 14px;
+  font-size: 0.14rem;
   &-item {
     display: flex;
     align-items: center;
-    margin-right: 12px;
+    margin-right: 0.12rem;
     .svg-icon {
-      margin-right: 5px;
-      padding: 2px;
-      font-size: 20px;
+      margin-right: 0.05rem;
+      padding: 0.02rem;
+      font-size: 0.2rem;
       background-color: var(--el-fill-color);
     }
   }

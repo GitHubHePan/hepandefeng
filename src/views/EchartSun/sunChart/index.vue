@@ -577,7 +577,7 @@ const chartOption = ref({
 
 <style lang="scss" scoped>
 .chartContainer {
-  height: calc(50vh - 50px);
+  height: calc(50vh - 0.5rem);
   width: 50%;
   display: flex;
 }

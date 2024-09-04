@@ -9,9 +9,8 @@ import EChartsCom from "@/components/chartComponent/index.vue"
 import SubContent from "@/components/subContent/index.vue"
 import mapData from "./result.json"
 import * as echarts from "echarts"
-
+import { getChartFontSzie } from "@/utils/index"
 import { ref, onUnmounted } from "vue"
-
 const echartsRefs = ref(null)
 
 onUnmounted(() => {
@@ -22,7 +21,7 @@ echarts.registerMap("china", mapData)
 
 const mapOption = {
   textStyle: {
-    fontSize: 16
+    fontSize: getChartFontSzie(16)
   },
   grid: {
     left: 20,
@@ -36,19 +35,15 @@ const mapOption = {
   },
   visualMap: [
     {
-      type: "piecewise", //piecewise\continuous
-      // min: isMinEquMax ? -1 : swRangeData.min,
+      type: "piecewise",
       show: false,
-      // max: swRangeData.max,
       itemWidth: 0,
       itemHeight: 0,
       dimension: 2,
       seriesIndex: 0,
-      // pieces: getBrandMap(),
       hoverLink: false,
       realtime: true,
       calculable: true
-      // color: disableGeo ? [] : visualMapColorList
     }
   ],
   geo: {
@@ -96,7 +91,7 @@ const mapOption = {
 
 <style lang="scss" scoped>
 .chartContainer {
-  height: calc(50vh - 50px);
+  height: calc(50vh - 0.5rem);
   width: 50%;
   display: flex;
 }

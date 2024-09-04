@@ -7,7 +7,6 @@
 <script setup>
 import PageFrame from "@/components/pageFrame/index.vue"
 import MapChart from "./mapChart/index.vue"
-// import mapData from "./result.json"
 
 const chartList = [
   {
@@ -16,6 +15,7 @@ const chartList = [
   }
 ]
 
+//压缩方法
 // function convert2Echarts(json) {
 //   let results = ""
 

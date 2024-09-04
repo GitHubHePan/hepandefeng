@@ -17,16 +17,19 @@
 
 // 业务页面几乎都应该在根元素上挂载 class="app-container"，以保持页面美观
 .app-container {
-  padding: 20px;
+  padding: 0.2rem;
   background-color: red;
 }
 
 html {
   height: 100%;
+  font-size: 5.2vw;
+  box-sizing: border-box;
 }
 
 body {
   height: 100%;
+  box-sizing: border-box;
   color: var(--HP-body-text-color);
   background-color: var(--HP-body-bg-color);
   -moz-osx-font-smoothing: grayscale;
@@ -34,10 +37,12 @@ body {
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial,
     sans-serif;
   @extend %scrollbar;
+  font-size: 0.16rem;
 }
 
 #app {
   height: 100%;
+  overflow: hidden;
 }
 
 *,

@@ -201,20 +201,20 @@ onMounted(() => {
       display: inline-block;
       position: relative;
       cursor: pointer;
-      height: 26px;
-      line-height: 26px;
+      height: 0.26rem;
+      line-height: 0.26rem;
       border: 1px solid var(--HP-tagsview-tag-border-color);
       border-radius: var(--HP-tagsview-tag-border-radius);
       background-color: var(--HP-tagsview-tag-bg-color);
-      padding: 0 8px;
-      font-size: 12px;
-      margin-left: 5px;
-      margin-top: 4px;
+      padding: 0 0.08rem;
+      font-size: 0.12rem;
+      margin-left: 0.05rem;
+      margin-top: 0.04rem;
       &:first-of-type {
-        margin-left: 5px;
+        margin-left: 0.05rem;
       }
       &:last-of-type {
-        margin-right: 5px;
+        margin-right: 0.05rem;
       }
       &.active {
         background-color: var(--HP-tagsview-tag-active-bg-color);
@@ -237,15 +237,15 @@ onMounted(() => {
     z-index: 3000;
     position: absolute;
     list-style-type: none;
-    padding: 5px 0;
-    border-radius: 4px;
-    font-size: 12px;
+    padding: 0.05rem 0;
+    border-radius: 0.04rem;
+    font-size: 0.12rem;
     color: var(--HP-tagsview-contextmenu-text-color);
     background-color: var(--HP-tagsview-contextmenu-bg-color);
     box-shadow: var(--HP-tagsview-contextmenu-box-shadow);
     li {
       margin: 0;
-      padding: 7px 16px;
+      padding: 0.07rem 0.16rem;
       cursor: pointer;
       &:hover {
         color: var(--HP-tagsview-contextmenu-hover-text-color);
