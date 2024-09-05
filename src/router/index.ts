@@ -108,6 +108,16 @@ export const constantRoutes: RouteRecordRaw[] = [
           svgIcon: "dashboard",
           affix: true
         }
+      },
+      {
+        path: "/echartsMap",
+        component: () => import("@/views/EchartMap/index.vue"),
+        name: "echartMap",
+        meta: {
+          title: "echart Map Chart",
+          svgIcon: "dashboard",
+          affix: true
+        }
       }
     ]
   }
